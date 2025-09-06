@@ -6,31 +6,38 @@ const SAMPLE_DATA = {
     'admin@civic.gov': { 
       password: 'admin123', 
       role: 'Admin', 
-      name: 'John Administrator',
+      // role: 'Municipal',
+      // name: 'John Administrator',
+       name: 'Rajesh Municipal',
+     
       department: 'Municipal'
     },
     'municipal@civic.gov': { 
       password: 'municipal123', 
       role: 'Municipal Officer', 
-      name: 'Sarah Municipal',
+      // name: 'Sarah Municipal',
+      name: 'Rajesh Municipal',
       department: 'Municipal'
     },
     'electricity@civic.gov': { 
       password: 'electric123', 
       role: 'Electricity Officer', 
-      name: 'Mike Electric',
+      // name: 'Mike Electric',
+      name: 'Ramesh Electric',
       department: 'Electricity'
     },
     'water@civic.gov': { 
       password: 'water123', 
       role: 'Water Officer', 
-      name: 'Lisa Water',
+      // name: 'Lisa Water',
+      name: 'Rahul Water',
       department: 'Water'
     },
     'field@civic.gov': { 
       password: 'field123', 
       role: 'Field Worker', 
-      name: 'Tom Field',
+      // name: 'Tom Field',
+      name: 'Shivendra Field',
       department: 'Municipal'
     }
   },
@@ -42,10 +49,12 @@ const SAMPLE_DATA = {
       type: 'Pothole',
       priority: 'High',
       status: 'Received',
-      location: 'Main Street & 2nd Ave',
+      // location: 'Main Street & 2nd Ave',
+      location: 'Ordance factory ,Muradnagar, Ghaziabad, UP',
       coordinates: [40.7128, -74.0060],
       reportedBy: 'John Doe',
-      reportedAt: '2025-01-15T10:30:00Z',
+      // reportedAt: '2025-01-15T10:30:00Z',
+      reportedAt: '2025-09-08T10:30:00Z',
       department: 'Municipal',
       assignedTo: null,
       ward: 'Ward 1'
@@ -57,12 +66,15 @@ const SAMPLE_DATA = {
       type: 'Streetlight',
       priority: 'Medium',
       status: 'In Progress',
-      location: 'Park Ave & 5th St',
+      // location: 'Park Ave & 5th St',
+      location: 'Railway Road, Muradnagar, Ghaziabad, UP',
       coordinates: [40.7589, -73.9851],
       reportedBy: 'Jane Smith',
-      reportedAt: '2025-01-14T15:45:00Z',
+      // reportedAt: '2025-01-14T15:45:00Z',
+      reportedAt: '2025-09-01T15:45:00Z',
       department: 'Electricity',
-      assignedTo: 'Mike Electric',
+      // assignedTo: 'Mike Electric',
+      assignedTo: 'Ramesh Electric',
       ward: 'Ward 2'
     },
     {
@@ -72,12 +84,15 @@ const SAMPLE_DATA = {
       type: 'Garbage',
       priority: 'Medium',
       status: 'Assigned',
-      location: 'Central Park Entrance',
+      // location: 'Central Park Entrance',
+      location: 'Central Park, Modi Nagar, Ghaziabad, UP',
       coordinates: [40.7831, -73.9712],
       reportedBy: 'Bob Johnson',
-      reportedAt: '2025-01-13T09:15:00Z',
+      // reportedAt: '2025-01-13T09:15:00Z',
+      reportedAt: '2025-08-25T09:15:00Z',
       department: 'Sanitation',
-      assignedTo: 'Tom Field',
+      // assignedTo: 'Tom Field',
+      assignedTo: 'Shivendra Field',
       ward: 'Ward 1'
     },
     {
@@ -87,12 +102,15 @@ const SAMPLE_DATA = {
       type: 'Water Leak',
       priority: 'Critical',
       status: 'Resolved',
-      location: 'Oak Street & 1st Ave',
+      // location: 'Oak Street & 1st Ave',
+      location: 'Near RapidX , Duhai, Ghaziabad, UP',
       coordinates: [40.7505, -73.9934],
       reportedBy: 'Alice Brown',
-      reportedAt: '2025-01-12T14:20:00Z',
+      // reportedAt: '2025-01-12T14:20:00Z',
+      reportedAt: '2025-08-03T14:20:00Z',
       department: 'Water',
-      assignedTo: 'Lisa Water',
+      // assignedTo: 'Lisa Water',
+      assignedTo: 'Rahul Water',
       ward: 'Ward 3'
     },
     {
@@ -102,12 +120,16 @@ const SAMPLE_DATA = {
       type: 'Electrical',
       priority: 'Critical',
       status: 'In Progress',
-      location: 'Elm Street & 3rd Ave',
+      // location: 'Elm Street & 3rd Ave',
+      location: 'Hapur Road, Muradnagar, Ghaziabad, UP',
       coordinates: [40.7614, -73.9776],
       reportedBy: 'David Wilson',
-      reportedAt: '2025-01-11T16:30:00Z',
+      // reportedBy: 'Ramesh Electric',
+      // reportedAt: '2025-01-11T16:30:00Z',
+      reportedAt: '2025-07-20T16:30:00Z',
       department: 'Electricity',
-      assignedTo: 'Mike Electric',
+      // assignedTo: 'Mike Electric',
+      assignedTo: 'Ramesh Electric',
       ward: 'Ward 2'
     }
   ],
@@ -591,10 +613,10 @@ function AssignmentModal({ isOpen, onClose, issue, onAssign }) {
               required
             >
               <option value="">Select assignee...</option>
-              <option value="Tom Field">Tom Field (Field Worker)</option>
-              <option value="Mike Electric">Mike Electric (Electrician)</option>
-              <option value="Lisa Water">Lisa Water (Plumber)</option>
-              <option value="Sarah Municipal">Sarah Municipal (Municipal)</option>
+              <option value="Tom Field">Shivendra Field (Field Worker)</option>
+              <option value="Mike Electric">Ramesh Electric (Electrician)</option>
+              <option value="Lisa Water">Rahul Water (Plumber)</option>
+              <option value="Sarah Municipal">Rajesh Municipal (Municipal)</option>
             </select>
           </div>
 

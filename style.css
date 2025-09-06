@@ -769,7 +769,9 @@ select.form-control {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--color-municipal-primary) 0%, var(--color-teal-600) 100%);
+  /* here make change */
+  background-color: #2c5364 ;
+  /* background: linear-gradient(135deg, var(--color-municipal-primary) 0%, var(--color-teal-600) 100%); */
   padding: var(--space-20);
 }
 
