@@ -156,6 +156,7 @@ function Login({ onLogin }) {
   };
 
   return (
+    
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
@@ -199,6 +200,11 @@ function Login({ onLogin }) {
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
         </form>
+        {<div style={{marginTop: '20px', fontSize: '15px', color: '#18231aff'}}>
+          <strong>"Every issue solved is a step toward cleaner, safer, and happier communities"</strong><br/>
+          As a government leader, every issue you resolve shapes the daily lives of citizens and builds trust in your community. By responding to reports, you're not just fixing problems — you're creating safer streets, cleaner neighborhoods, and a stronger bond between people and their government.
+Your dedication turns challenges into progress and inspires citizens to believe in positive change.
+        </div>}
 
         {/* <div style={{marginTop: '20px', fontSize: '12px', color: '#6b7280'}}>
           <strong>Demo Accounts:</strong><br/>
