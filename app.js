@@ -4,7 +4,9 @@ const { useState, useEffect } = React;
 const SAMPLE_DATA = {
   users: {
     'admin@civic.gov': { 
+    // 'municipal@civic.gov': {
       password: 'admin123', 
+      // password: 'municipal123',
       role: 'Admin', 
       // role: 'Municipal',
       // name: 'John Administrator',
@@ -12,12 +14,17 @@ const SAMPLE_DATA = {
      
       department: 'Municipal'
     },
-    'municipal@civic.gov': { 
-      password: 'municipal123', 
-      role: 'Municipal Officer', 
+    // 'municipal@civic.gov':
+     'pwd@civic.gov':{ 
+      // password: 'municipal123', 
+      password: 'pwd123',
+      // role: 'Municipal Officer', 
+      role: 'Public Works Department (PWD)',
       // name: 'Sarah Municipal',
-      name: 'Rajesh Municipal',
-      department: 'Municipal'
+      // name: 'Rajesh Municipal',
+      name : 'Vijay PWD',
+      // department: 'Municipal'
+      department: 'PWD'
     },
     'electricity@civic.gov': { 
       password: 'electric123', 
@@ -55,7 +62,8 @@ const SAMPLE_DATA = {
       reportedBy: 'John Doe',
       // reportedAt: '2025-01-15T10:30:00Z',
       reportedAt: '2025-09-08T10:30:00Z',
-      department: 'Municipal',
+      // department: 'Municipal',
+      department: 'PWD',
       assignedTo: null,
       ward: 'Ward 1'
     },
@@ -254,7 +262,8 @@ function Sidebar({ user, activeSection, setActiveSection }) {
       { id: 'analytics', icon: 'fas fa-chart-bar', label: 'Analytics' }
     ];
 
-    if (user.role === 'Admin' || user.role === 'Municipal Officer') {
+    // if (user.role === 'Admin' || user.role === 'Municipal Officer') {
+    if (user.role === 'Admin' || user.role === 'Public Works Department (PWD)') {
       baseItems.push({ id: 'departments', icon: 'fas fa-building', label: 'Departments' });
     }
 
@@ -621,7 +630,8 @@ function AssignmentModal({ isOpen, onClose, issue, onAssign }) {
               <option value="Tom Field">Shivendra Field (Field Worker)</option>
               <option value="Mike Electric">Ramesh Electric (Electrician)</option>
               <option value="Lisa Water">Rahul Water (Plumber)</option>
-              <option value="Sarah Municipal">Rajesh Municipal (Municipal)</option>
+              {/* <option value="Sarah Municipal">Rajesh Municipal (Municipal)</option> */}
+              <option value="Raju PWD">Raju PWD (PWD)</option>
             </select>
           </div>
 
